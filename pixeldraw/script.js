@@ -1,5 +1,8 @@
 const gridContainer = document.querySelector('.container');
-const resetButton = document.getElementById('reset-btn');
+const resetButton = document.getElementById('btn-reset');
+const colorsButton = document.getElementById('btn-mobile');
+const toggleColors = document.querySelector('.colors');
+
 let gridSize = [16, 16];
 
 const randomInt = (min, max) =>

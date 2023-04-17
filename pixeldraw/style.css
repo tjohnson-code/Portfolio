@@ -28,7 +28,7 @@ header {
   background-color: #5a5a5a;
 }
 
-.btn-mobile {
+#btn-mobile {
   display: none;
 }
 
@@ -122,6 +122,13 @@ input[type='number'] {
     width: 100vw;
     height: 100vh;
   }
+  header {
+    display: none;
+  }
+
+  h4 {
+    display: none;
+  }
 
   .main {
     flex-direction: column;
@@ -145,11 +152,8 @@ input[type='number'] {
 }
 
 @media (max-width: 1000px) {
-  .btn-color {
-    display: none;
-  }
-
-  .btn-mobile {
-    display: block;
+  .colors {
+    display: flex;
+    flex-direction: column;
   }
 }
