@@ -28,6 +28,10 @@ header {
   background-color: #5a5a5a;
 }
 
+.btn-mobile {
+  display: none;
+}
+
 button.active {
   background-color: #657eaf;
   color: #ffffff;
@@ -118,6 +122,7 @@ input[type='number'] {
     width: 100vw;
     height: 100vh;
   }
+
   .main {
     flex-direction: column;
   }
@@ -136,5 +141,15 @@ input[type='number'] {
 
   .grid-layout {
     font-size: 2vw;
+  }
+}
+
+@media (max-width: 1000px) {
+  .btn-color {
+    display: none;
+  }
+
+  .btn-mobile {
+    display: block;
   }
 }

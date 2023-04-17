@@ -34,7 +34,7 @@ const draw = function (grid) {
   const blackButton = document.getElementById('btn-black');
   const whiteButton = document.getElementById('btn-white');
   const randomButton = document.getElementById('btn-random');
-  const defaultChoice = document.querySelector('.btn-black');
+  const defaultChoice = blackButton;
 
   defaultChoice.classList.add('active');
 
@@ -42,32 +42,40 @@ const draw = function (grid) {
     button.addEventListener('click', function () {
       // Remove the 'active class from all buttons
       colorChoice.forEach((b) => b.classList.remove('active'));
-
       // Add 'active class to clicked button
       this.classList.add('active');
     });
   });
 
+  // Function to check the user selection
+  const checkUserSelection = function (event) {
+    const userSelection = event.target;
+    // If user selects black, set drawing color to black
+    if (blackButton.classList.contains('active')) {
+      userSelection.style.backgroundColor = 'black';
+      // Set the current userSelection as the prevSelection
+      prevSelection = userSelection;
+      // If user selects white, set drawing color to white
+    } else if (whiteButton.classList.contains('active')) {
+      userSelection.style.backgroundColor = 'white';
+      // Set the current userSelection as the prevSelection
+      prevSelection = userSelection;
+      //If user selects random colors, set drawing color to random
+    } else if (randomButton.classList.contains('active')) {
+      userSelection.style.backgroundColor = randomColor();
+      // Set the current userSelection as the prevSelection
+      prevSelection = userSelection;
+      // else, set drawing color to random
+    } else {
+      userSelection.style.backgroundColor = randomBlues();
+      // Set the current userSelection as the prevSelection
+      prevSelection = userSelection;
+    }
+  };
+
   grid.addEventListener('mousedown', function (event) {
     isMouseDown = true;
-    const userSelection = event.target;
-    if (blackButton.classList.contains('active')) {
-      //Set drawing color to black
-      userSelection.style.backgroundColor = 'black';
-      prevSelection = userSelection; // Set the current userSelection as the prevSelection
-    } else if (whiteButton.classList.contains('active')) {
-      //Set drawing color to white
-      userSelection.style.backgroundColor = 'white';
-      prevSelection = userSelection; // Set the current userSelection as the prevSelection
-    } else if (randomButton.classList.contains('active')) {
-      //Set drawing color to random
-      userSelection.style.backgroundColor = randomColor();
-      prevSelection = userSelection; // Set the current userSelection as the prevSelection
-    } else {
-      //Set drawing color to random
-      userSelection.style.backgroundColor = randomBlues();
-      prevSelection = userSelection; // Set the current userSelection as the prevSelection
-    }
+    checkUserSelection(event);
   });
 
   grid.addEventListener('mouseup', function () {
@@ -77,25 +85,9 @@ const draw = function (grid) {
 
   grid.addEventListener('mousemove', function (event) {
     const userSelection = event.target;
+    // Check if the mouse button is pressed and the userSelection is not the prevSelection
     if (isMouseDown && userSelection !== prevSelection) {
-      // Check if the mouse button is pressed and the userSelection is not the prevSelection
-      if (blackButton.classList.contains('active')) {
-        //Set drawing color to black
-        userSelection.style.backgroundColor = 'black';
-        prevSelection = userSelection; // Set the current userSelection as the prevSelection
-      } else if (whiteButton.classList.contains('active')) {
-        //Set drawing color to white
-        userSelection.style.backgroundColor = 'white';
-        prevSelection = userSelection; // Set the current userSelection as the prevSelection
-      } else if (randomButton.classList.contains('active')) {
-        //Set drawing color to random
-        userSelection.style.backgroundColor = randomColor();
-        prevSelection = userSelection; // Set the current userSelection as the prevSelection
-      } else {
-        //Set drawing color to random
-        userSelection.style.backgroundColor = randomBlues();
-        prevSelection = userSelection; // Set the current userSelection as the prevSelection
-      }
+      checkUserSelection(event);
     }
   });
 };
