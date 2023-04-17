@@ -1,8 +1,8 @@
 html,
 body {
   margin: 0px;
-  width: 100vw;
-  height: 100vh;
+  width: 100%vw;
+  height: 100%vh;
   background-color: #282c34;
   color: #abb2bf;
   font-family: 'Fira Code', monospace;
@@ -51,7 +51,7 @@ input[type='number'] {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background-color: #282c34;
 }
 
@@ -98,6 +98,11 @@ input[type='number'] {
 }
 
 @media (max-width: 816px) {
+  html,
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
   .main {
     flex-direction: column;
   }
