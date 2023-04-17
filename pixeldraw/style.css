@@ -93,8 +93,23 @@ input[type='number'] {
 
 .footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin-top: 1rem;
+}
+
+.links {
+  display: flex;
+  gap: 15px;
+}
+
+.git-logo {
+  width: 1.5rem;
+}
+
+.linkedin-logo {
+  width: 2rem;
 }
 
 @media (max-width: 816px) {
