@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pixel-Draw</title>
+  </head>
+  <body>
+    <header><h1>Pixel-Draw</h1></header>
+
+    <div class="main">
+      <div class="selections">
+        <h2>Time to Draw!</h2>
+        Enter your desired grid-size (2 to 100), and hit ".generate" to adjust
+        your drawing area.
+        <p>
+          <input class="grid-size" type="number" />
+          <button class="btn" id="reset-btn">.generate</button>
+        </p>
+        <p>
+          <span class="error-message"></span>
+        </p>
+        <h4>Choose your color.</h4>
+        <p>
+          <button class="btn btn-color btn-black" id="btn-black">Black</button>
+          <button class="btn btn-color btn-white" id="btn-white">White</button>
+          <button class="btn btn-color btn-random" id="btn-random">
+            Random Colors
+          </button>
+          <button class="btn btn-color btn-random" id="btn-random">
+            Random Blues
+          </button>
+        </p>
+      </div>
+      <div class="container"></div>
+    </div>
+    <footer class="footer">&copy; 2023 Tim Johnson</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
