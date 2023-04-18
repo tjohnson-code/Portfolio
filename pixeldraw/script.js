@@ -2,8 +2,15 @@ const gridContainer = document.querySelector('.container');
 const resetButton = document.getElementById('btn-reset');
 const colorsButton = document.getElementById('btn-mobile');
 const toggleColors = document.querySelector('.colors');
+const congratsModal = document.getElementById('congrats-modal');
+const modalContent = document.querySelector('.modal-content');
+const closeModal = document.querySelector('.close-modal');
+const congratsTitle = document.createElement('h2');
+const congratsMessage = document.createElement('p');
+const playGameButton = document.createElement('a');
 
 let gridSize = [16, 16];
+let alreadyAlerted = false;
 
 const randomInt = (min, max) =>
   Math.floor(Math.random() * (max - min + 1)) + min;
@@ -50,6 +57,66 @@ const draw = function (grid) {
     });
   });
 
+  // Create an object to store selected corners
+  const selectedCorners = {
+    topLeft: null,
+    topRight: null,
+    bottomLeft: null,
+    bottomRight: null,
+  };
+
+  // Function to check if the selected cell is a corner and update selectedCorners
+  let cornerCount = 0;
+
+  const checkCornerSelection = function (row, col) {
+    const rows = gridSize[0];
+    const cols = gridSize[1];
+
+    const cornerPositions = {
+      topLeft: { row: 0, col: 0 },
+      topRight: { row: 0, col: cols - 1 },
+      bottomLeft: { row: rows - 1, col: 0 },
+      bottomRight: { row: rows - 1, col: cols - 1 },
+    };
+
+    let cornerFound = false;
+
+    for (const key in cornerPositions) {
+      const corner = cornerPositions[key];
+
+      if (
+        row === corner.row &&
+        col === corner.col &&
+        selectedCorners[key] === null
+      ) {
+        selectedCorners[key] = cornerCount++;
+        cornerFound = true;
+        break;
+      }
+    }
+
+    if (!cornerFound) {
+      cornerCount = 0;
+      Object.keys(selectedCorners).forEach((key) => {
+        selectedCorners[key] = null;
+      });
+    }
+  };
+
+  // Function to check if all corners are selected and show a prompt if so
+  const checkAllCornersSelected = function () {
+    if (
+      !alreadyAlerted &&
+      selectedCorners.topLeft === 0 &&
+      selectedCorners.topRight === 1 &&
+      selectedCorners.bottomLeft === 2 &&
+      selectedCorners.bottomRight === 3
+    ) {
+      congratsModal.style.display = 'block';
+      alreadyAlerted = true;
+    }
+  };
+
   // Function to check the user selection
   const checkUserSelection = function (event) {
     const userSelection = event.target;
@@ -74,6 +141,19 @@ const draw = function (grid) {
       // Set the current userSelection as the prevSelection
       prevSelection = userSelection;
     }
+
+    // Get the row and column index of the selected cell
+    const rowIndex = Math.floor(
+      Array.from(grid.children).indexOf(event.target) / gridSize[1]
+    );
+    const colIndex =
+      Array.from(grid.children).indexOf(event.target) % gridSize[1];
+
+    // Check if the selected cell is a corner
+    checkCornerSelection(rowIndex, colIndex);
+
+    // Check if all corners are selected
+    checkAllCornersSelected();
   };
 
   grid.addEventListener('mousedown', function (event) {
@@ -106,10 +186,37 @@ resetButton.addEventListener('click', function () {
     const oldGrid = document.querySelectorAll('.grid-layout');
     oldGrid.forEach((div) => div.remove());
     gridSize = new Array(2).fill(Number(newGridSize));
-    createGrid();
+    const newGrid = createGrid();
+    // Reset alreadyAlerted and selectedCorners
+    alreadyAlerted = false;
+    Object.keys(selectedCorners).forEach((key) => {
+      selectedCorners[key] = null;
+    });
+    draw(newGrid);
     // if user enters something else generate error message
   } else {
     errorMessage.textContent =
       'Invalid number: Please select between 2 and 100';
+  }
+});
+
+congratsTitle.textContent = 'Congratulations!';
+congratsMessage.textContent = 'You have unlocked a hidden game!';
+playGameButton.textContent = 'Play the game';
+playGameButton.href = '#';
+playGameButton.classList.add('btn');
+playGameButton.classList.add('btn-play-game');
+
+modalContent.appendChild(congratsTitle);
+modalContent.appendChild(congratsMessage);
+modalContent.appendChild(playGameButton);
+
+closeModal.addEventListener('click', function () {
+  congratsModal.style.display = 'none';
+});
+
+window.addEventListener('click', function (event) {
+  if (event.target === congratsModal) {
+    congratsModal.style.display = 'none';
   }
 });
