@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script defer src="script.js"></script>
+    <title>Modern Layout</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <!-- Company logo and search bar -->
+        <div class="top-section">
+          <img
+            src="https://www.proactinc.org/wp-content/uploads/2014/10/proactlogo1-med.jpg"
+            alt="ProAct Logo"
+            class="proact-logo"
+          />
+        </div>
+        <!-- Social media icons and logo links -->
+        <div class="logo-links">
+          <a href="https://www.facebook.com"
+            ><img class="fb-logo" src="images/f_logo_RGB-Blue_58.png"
+          /></a>
+          <a href="https://instagram.com"
+            ><img
+              class="instagram-logo"
+              src="images/Instagram_Glyph_Gradient.png"
+          /></a>
+          <a href="https://www.linkedin.com"
+            ><img class="linked-in-logo" src="images/LI-In-Bug.png"
+          /></a>
+          <a href="https://www.youtube.com"
+            ><img class="youtube-logo" src="images/yt_icon_rgb.png"
+          /></a>
+          <!-- Add your logo links here -->
+        </div>
+        <!-- Main navigation -->
+        <nav>
+          <ul class="nav-links">
+            <a href="#about">About</a>
+            <a href="#news">News</a>
+            <a href="#indiv-services">Individual Services</a>
+            <a href="#prod-services">Production Services</a>
+            <a href="#careers">Careers</a>
+            <a href="#contact">Contact Us</a>
+            <input type="text" class="search-bar" placeholder="Search..." />
+            <!-- Add your main navigation links here -->
+          </ul>
+        </nav>
+        <div class="mission-vision-container">
+          <h1>Maximizing Individual Potential for Greater Self-Sufficiency</h1>
+          <div class="mission-vision-main">
+            <div class="mission-content">
+              <h3>Mission</h3>
+              <p>
+                To provide person-centered services that enhance the quality of
+                life for people with disabilities in the areas of employment,
+                life skills, and community inclusion.
+              </p>
+            </div>
+            <div class="vision-content">
+              <h3>Vision</h3>
+              <p>
+                ProAct will be the provider of choice for person-centered
+                services that enhance the quality of life for people with
+                disabilities. With a purpose to maximize individual potential
+                for greater self-sufficiency.
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <!-- About Section -->
+        <section id="about">
+          <div class="tabs">
+            <a class="tab" href="#about" data-content="about">About</a>
+            <a class="tab" href="#core-values" data-content="core-values"
+              >Core Values</a
+            >
+            <a class="tab" href="#our-staff" data-content="our-staff"
+              >Our Staff</a
+            >
+            <a
+              class="tab"
+              href="#board-of-directors"
+              data-content="board-of-directors"
+              >Board of Directors</a
+            >
+            <a class="tab" href="#accreditation" data-content="accreditation"
+              >Accreditation</a
+            >
+            <a
+              class="tab"
+              href="#important-documents"
+              data-content="important-documents"
+              >Important Documents</a
+            >
+            <a class="tab" href="#resources" data-content="resources"
+              >Resources</a
+            >
+            <a class="tab" href="#donations" data-content="donations"
+              >Donations</a
+            >
+          </div>
+          <button class="drop-down-btn mobile-only">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+          <div class="tabs-drop-down mobile-only">
+            <a class="tab" href="#about" data-content="about">About</a>
+            <a class="tab" href="#core-values" data-content="core-values"
+              >Core Values</a
+            >
+            <a class="tab" href="#our-staff" data-content="our-staff"
+              >Our Staff</a
+            >
+            <a
+              class="tab"
+              href="#board-of-directors"
+              data-content="board-of-directors"
+              >Board of Directors</a
+            >
+            <a class="tab" href="#accreditation" data-content="accreditation"
+              >Accreditation</a
+            >
+            <a
+              class="tab"
+              href="#important-documents"
+              data-content="important-documents"
+              >Important Documents</a
+            >
+            <a class="tab" href="#resources" data-content="resources"
+              >Resources</a
+            >
+            <a class="tab" href="#donations" data-content="donations"
+              >Donations</a
+            >
+          </div>
+
+          <div class="section-content" id="about-content">
+            <!-- Content will be loaded here dynamically -->
+          </div>
+        </section>
+        <section id="news">
+          <h2>News</h2>
+          <div class="tabs">
+            <a class="tab" href="#news" data-content="news">News</a>
+            <a class="tab" href="#videos" data-content="videos">Videos</a>
+            <a class="tab" href="#events" data-content="events">Events</a>
+            <a class="tab" href="#publications" data-content="publications"
+              >Publications</a
+            >
+            <a class="tab" href="#testimonials" data-content="testimonials"
+              >Testimonials</a
+            >
+          </div>
+          <div class="section-content" id="news-content">
+            <!-- Content will be loaded here dynamically -->
+          </div>
+        </section>
+        <section id="indiv-services">
+          <h2>Individual Services</h2>
+
+          <div class="tabs">
+            <a class="tab" href="#day-support" data-content="day-support"
+              >Day Support Services</a
+            >
+            <a
+              class="tab"
+              href="#employment-development"
+              data-content="employment-development"
+              >Employment Development Services</a
+            >
+            <a
+              class="tab"
+              href="#employment-support"
+              data-content="employment-support"
+              >Employment Support Services</a
+            >
+            <a class="tab" href="#living-skills" data-content="living-skills"
+              >Individual Home and Semi-Independent Living Skills Support
+              Services</a
+            >
+          </div>
+          <div class="section-content" id="indiv-services-content">
+            <!-- Content will be loaded here dynamically -->
+          </div>
+        </section>
+        <section id="prod-services">
+          <h2>Production Services</h2>
+          <div class="tabs">
+            <a class="tab" href="#eagan-services" data-content="eagan-services"
+              >Eagan</a
+            >
+            <a
+              class="tab"
+              href="#red-wing-services"
+              data-content="red-wing-services"
+              >Red Wing</a
+            >
+            <div class="section-content" id="prod-services-content">
+              <!-- Content will be loaded here dynamically -->
+            </div>
+          </div>
+        </section>
+        <section id="careers">
+          <h2>Careers</h2>
+          <div class="tabs">
+            <a class="tab" href="#open-positions" data-content="open-positions"
+              >Open Positions</a
+            >
+            <a class="tab" href="#apply" data-content="apply">Apply</a>
+            <a class="tab" href="#benefits" data-content="benefits">Benefits</a>
+          </div>
+          <div class="section-content" id="careers-content">
+            <!-- Content will be loaded here dynamically -->
+          </div>
+        </section>
+        <section id="contact">
+          <h2>Contact</h2>
+          <div class="tabs">
+            <a class="tab" href="#corporate" data-content="corporate"
+              >Corporate</a
+            >
+            <a class="tab" href="#eagan-contact" data-content="eagan-contact"
+              >Eagan</a
+            >
+            <a class="tab" href="#hudson" data-content="hudson">Hudson</a>
+            <a
+              class="tab"
+              href="#red-wing-contact"
+              data-content="red-wing-contact"
+              >Red Wing</a
+            >
+            <a class="tab" href="#shakopee" data-content="shakopee">Shakopee</a>
+          </div>
+          <div class="section-content" id="contact-content">
+            <!-- Content will be loaded here dynamically -->
+          </div>
+        </section>
+        <!-- Add other sections as needed -->
+      </main>
+
+      <footer>&copy; 2023</footer>
+    </div>
+  </body>
+</html>

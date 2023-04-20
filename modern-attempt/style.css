@@ -1,0 +1,288 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  color: #0f2a6c;
+  background-color: #ffffff;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100% vw;
+  height: 100% vh;
+}
+
+/* Logo links */
+.logo-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.proact-logo {
+  width: 10rem;
+}
+
+.fb-logo {
+  width: 2rem;
+}
+
+.instagram-logo {
+  width: 2rem;
+}
+
+.linked-in-logo {
+  width: 2rem;
+}
+
+.youtube-logo {
+  width: 2rem;
+}
+
+.logo-links a {
+  color: #4cb8e1;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+/* Top section */
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.mission-vision-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mission-vision-container h1 {
+  text-align: center;
+}
+
+.mission-vision-main {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  max-width: 60%;
+  margin-bottom: 31px;
+}
+
+.mission-vision-main h3 {
+  text-align: center;
+}
+
+.mission-content,
+.vision-content {
+  border: 3px solid #4cb8e1;
+  font-style: italic;
+  padding: 21px;
+  width: 50%;
+}
+
+.search-bar {
+  border: 1px solid #4cb8e1;
+  border-radius: 5px;
+  padding: 5px 10px;
+  outline: none;
+  width: 200px;
+}
+
+/* Main navigation */
+nav {
+  background-color: #0f2a6c;
+  padding: 15px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0 15px;
+}
+
+.nav-links a:hover {
+  color: #4cb8e1;
+}
+
+/* Main content */
+main {
+  padding: 20px;
+}
+
+.section-content {
+  padding: 6px 0;
+  height: 350px;
+  overflow-y: auto;
+}
+
+.section-content li {
+  padding: 10px;
+  list-style-type: none;
+}
+
+#about-content {
+  background-color: #f5f5f5;
+}
+
+/* Section navigation */
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #0f2a6c;
+  margin-bottom: 1rem;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #0f2a6c;
+  border-bottom: 2px solid transparent;
+}
+
+.tab:hover {
+  border-bottom: 2px solid #4cb8e1;
+  color: #4cb8e1;
+}
+
+.tab.active {
+  border-bottom: 2px solid #4cb8e1;
+  color: #4cb8e1;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* Drop-down button */
+.drop-down-btn {
+  background-color: #0f2a6c;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.drop-down-btn:hover {
+  background-color: #4cb8e1;
+}
+
+/* Drop-down menu */
+.tabs-drop-down {
+  display: none;
+  background-color: #f1f1f1;
+  border-left: 1px solid #0f2a6c;
+  border-right: 1px solid #0f2a6c;
+  border-bottom: 1px solid #0f2a6c;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+
+/* Footer */
+footer {
+  background-color: #0f2a6c;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+
+  main {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .tabs {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .tabs-drop-down {
+    display: none;
+  }
+
+  .mission-vision-container {
+    text-align: center;
+  }
+
+  .mission-vision-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .proact-logo {
+    margin-bottom: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+  }
+
+  .search-bar {
+    align-self: center;
+    margin-bottom: 15px;
+  }
+
+  .mission-vision-main {
+    max-width: 100%;
+  }
+
+  .mission-content,
+  .vision-content {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  /* Add later */
+}
+
+@media (min-width: 1200px) {
+  /* Add later */
+}
