@@ -1,4 +1,11 @@
-{
-  "title": "Core Values",
-  "content1": "ProAct provides in-center, virtual and community-based services for individuals with disabilities in Eagan (Corporate location), Shakopee, Red Wing and Hudson, Wisconsin. Today, ProAct Inc. with mergers and acquisitions has over 60 years of experience, providing programming to individuals with intellectual, mental health, physical, communication and sensory disabilities from Dakota, Scott, Goodhue and 20 other counties."
-}
+[
+  {
+    "title": "Core Values",
+    "heading": "Excellence",
+    "content1": "Be a professionally and community recognized leader in the services and products delivered."
+  },
+  {
+    "heading": "Integrity",
+    "content1": "To achieve the highest level of trustworthiness as the result of our actions, and be accountable for documented ethical and professional standards."
+  }
+]
