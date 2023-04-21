@@ -128,19 +128,21 @@ main {
   padding: 20px;
 }
 
+main h2 {
+  text-align: center;
+  background-color: #0f2a6c;
+  color: #f5f5f5;
+}
+
 .section-content {
   padding: 6px 0;
-  height: 350px;
+  height: 300px;
   overflow-y: auto;
 }
 
 .section-content li {
   padding: 10px;
   list-style-type: none;
-}
-
-#about-content {
-  background-color: #f5f5f5;
 }
 
 /* Section navigation */
@@ -169,6 +171,22 @@ main {
   color: #4cb8e1;
 }
 
+.year-info-grid {
+  display: grid;
+  grid-template-columns: auto auto; /* Creates a 2-column grid */
+  border: 1px solid #4cb8e1;
+}
+
+.year-item,
+.info-item {
+  padding: 4px;
+  border: 1px solid #4cb8e1;
+}
+
+.year-item {
+  font-weight: bold;
+}
+
 .mobile-only {
   display: none;
 }
@@ -192,7 +210,7 @@ main {
 /* Drop-down menu */
 .tabs-drop-down {
   display: none;
-  background-color: #f1f1f1;
+  background-color: #f5f5f5;
   border-left: 1px solid #0f2a6c;
   border-right: 1px solid #0f2a6c;
   border-bottom: 1px solid #0f2a6c;
@@ -228,7 +246,8 @@ footer {
   }
 
   .mobile-only {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 
   .tabs-drop-down {

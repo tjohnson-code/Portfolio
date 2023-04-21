@@ -23,10 +23,31 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .then((content) => {
         const sectionContent = document.querySelector(`#${sectionId}-content`);
-        sectionContent.innerHTML = `
-          <h3>${content.title}</h3>
-          <p>${content.content}</p>
-        `;
+
+        // Check if content is an array, if not convert it to one
+        const contentArray = Array.isArray(content) ? content : [content];
+
+        sectionContent.innerHTML = contentArray
+          .map(
+            (section) => `
+    ${section.title ? `<h2>${section.title}</h2>` : ''}
+    ${section.heading ? `<h3>${section.heading}</h3>` : ''}
+    ${section.content1 ? `<p>${section.content1}</p>` : ''}
+    ${section.content2 ? `<p>${section.content2}</p>` : ''}
+    ${section.content3 ? `<p>${section.content3}</p>` : ''}
+    ${
+      section.list
+        ? `<div class="year-info-grid">${section.list
+            .map(
+              (item) =>
+                `<div class="year-item">${item.year}</div><div class="info-item">${item.info}</div>`
+            )
+            .join('')}</div>`
+        : ''
+    }
+  `
+          )
+          .join('');
       })
       .catch((error) => {
         console.error('Error loading content:', error);
@@ -69,10 +90,10 @@ const dropDownButtons = document.querySelectorAll('.drop-down-btn');
 dropDownButtons.forEach((dropdownBtn) => {
   dropdownBtn.addEventListener('click', () => {
     const dropDown = dropdownBtn.nextElementSibling;
-    if (dropDown.style.display === 'block') {
+    if (dropDown.style.display === 'flex') {
       dropDown.style.display = 'none';
     } else {
-      dropDown.style.display = 'block';
+      dropDown.style.display = 'flex';
     }
   });
 });
