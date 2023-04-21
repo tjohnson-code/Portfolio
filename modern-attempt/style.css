@@ -1,4 +1,9 @@
 /* Global styles */
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
   color: #0f2a6c;
@@ -8,6 +13,7 @@ body {
   padding: 0;
 }
 
+/* Main container */
 .container {
   display: flex;
   flex-direction: column;
@@ -57,6 +63,34 @@ body {
   align-items: flex-start;
 }
 
+/* Main navigation */
+nav {
+  background-color: #0f2a6c;
+  padding: 15px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0 15px;
+}
+
+.nav-links a:hover {
+  color: #4cb8e1;
+}
+
 .mission-vision-container {
   display: flex;
   flex-direction: column;
@@ -95,34 +129,6 @@ body {
   width: 200px;
 }
 
-/* Main navigation */
-nav {
-  background-color: #0f2a6c;
-  padding: 15px;
-}
-
-.nav-links {
-  display: flex;
-  justify-content: space-around;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li {
-  display: inline;
-}
-
-.nav-links a {
-  color: #ffffff;
-  text-decoration: none;
-  padding: 0 15px;
-}
-
-.nav-links a:hover {
-  color: #4cb8e1;
-}
-
 /* Main content */
 main {
   padding: 20px;
@@ -136,6 +142,9 @@ main h2 {
 
 .section-content {
   padding: 6px 0;
+}
+
+.scroll-container {
   height: 300px;
   overflow-y: auto;
 }

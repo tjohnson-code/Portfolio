@@ -27,27 +27,36 @@ document.addEventListener('DOMContentLoaded', () => {
         // Check if content is an array, if not convert it to one
         const contentArray = Array.isArray(content) ? content : [content];
 
-        sectionContent.innerHTML = contentArray
-          .map(
-            (section) => `
-    ${section.title ? `<h2>${section.title}</h2>` : ''}
-    ${section.heading ? `<h3>${section.heading}</h3>` : ''}
-    ${section.content1 ? `<p>${section.content1}</p>` : ''}
-    ${section.content2 ? `<p>${section.content2}</p>` : ''}
-    ${section.content3 ? `<p>${section.content3}</p>` : ''}
-    ${
-      section.list
-        ? `<div class="year-info-grid">${section.list
-            .map(
-              (item) =>
-                `<div class="year-item">${item.year}</div><div class="info-item">${item.info}</div>`
-            )
-            .join('')}</div>`
-        : ''
-    }
-  `
-          )
-          .join('');
+        const titleDiv = document.createElement('div');
+        const scrollDiv = document.createElement('div');
+        scrollDiv.classList.add('scroll-container');
+
+        contentArray.forEach((section) => {
+          if (section.title) {
+            titleDiv.innerHTML += `<h2>${section.title}</h2>`;
+          }
+
+          scrollDiv.innerHTML += `
+            ${section.heading ? `<h3>${section.heading}</h3>` : ''}
+            ${section.content1 ? `<p>${section.content1}</p>` : ''}
+            ${section.content2 ? `<p>${section.content2}</p>` : ''}
+            ${section.content3 ? `<p>${section.content3}</p>` : ''}
+            ${
+              section.list
+                ? `<div class="year-info-grid">${section.list
+                    .map(
+                      (item) =>
+                        `<div class="year-item">${item.year}</div><div class="info-item">${item.info}</div>`
+                    )
+                    .join('')}</div>`
+                : ''
+            }
+          `;
+        });
+
+        sectionContent.innerHTML = '';
+        sectionContent.appendChild(titleDiv);
+        sectionContent.appendChild(scrollDiv);
       })
       .catch((error) => {
         console.error('Error loading content:', error);
