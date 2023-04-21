@@ -183,6 +183,7 @@ main h2 {
 .year-info-grid {
   display: grid;
   grid-template-columns: auto auto; /* Creates a 2-column grid */
+  width: 67%;
   border: 1px solid #4cb8e1;
 }
 
@@ -224,7 +225,7 @@ main h2 {
   border-right: 1px solid #0f2a6c;
   border-bottom: 1px solid #0f2a6c;
 }
-
+/* Google drop-down symbol */
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
 }
