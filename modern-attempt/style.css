@@ -268,6 +268,10 @@ footer {
     box-sizing: border-box;
   }
 
+  .floating {
+    display: none;
+  }
+
   main {
     padding: 20px;
     box-sizing: border-box;
