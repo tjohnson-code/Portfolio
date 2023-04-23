@@ -8,14 +8,12 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
-    <script defer src="script.js"></script>
     <title>Modern Layout</title>
   </head>
 
   <body>
     <div class="container">
-      <header>
+      <header class="header">
         <!-- Company logo and search bar -->
         <div class="top-section">
           <img
@@ -44,7 +42,7 @@
           <!-- Add your logo links here -->
         </div>
         <!-- Main navigation -->
-        <nav>
+        <nav class="nav">
           <ul class="nav-links">
             <a href="#about">About</a>
             <a href="#news">News</a>
@@ -152,7 +150,6 @@
           </div>
         </section>
         <section id="news">
-          <h2>News</h2>
           <div class="tabs">
             <a class="tab" href="#news" data-content="news">News</a>
             <a class="tab" href="#videos" data-content="videos">Videos</a>
@@ -164,6 +161,22 @@
               >Testimonials</a
             >
           </div>
+
+          <button class="drop-down-btn mobile-only">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+          <div class="tabs-drop-down mobile-only">
+            <a class="tab" href="#news" data-content="news">News</a>
+            <a class="tab" href="#videos" data-content="videos">Videos</a>
+            <a class="tab" href="#events" data-content="events">Events</a>
+            <a class="tab" href="#publications" data-content="publications"
+              >Publications</a
+            >
+            <a class="tab" href="#testimonials" data-content="testimonials"
+              >Testimonials</a
+            >
+          </div>
+
           <div class="section-content" id="news-content">
             <!-- Content will be loaded here dynamically -->
           </div>
@@ -192,6 +205,31 @@
               Services</a
             >
           </div>
+
+          <button class="drop-down-btn mobile-only">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+          <div class="tabs-drop-down mobile-only">
+            <a class="tab" href="#day-support" data-content="day-support"
+              >Day Support Services</a
+            >
+            <a
+              class="tab"
+              href="#employment-development"
+              data-content="employment-development"
+              >Employment Development Services</a
+            >
+            <a
+              class="tab"
+              href="#employment-support"
+              data-content="employment-support"
+              >Employment Support Services</a
+            >
+            <a class="tab" href="#living-skills" data-content="living-skills"
+              >Living Skills Support Services</a
+            >
+          </div>
+
           <div class="section-content" id="indiv-services-content">
             <!-- Content will be loaded here dynamically -->
           </div>
@@ -208,9 +246,24 @@
               data-content="red-wing-services"
               >Red Wing</a
             >
-            <div class="section-content" id="prod-services-content">
-              <!-- Content will be loaded here dynamically -->
-            </div>
+          </div>
+          <button class="drop-down-btn mobile-only">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+          <div class="tabs-drop-down mobile-only">
+            <a class="tab" href="#eagan-services" data-content="eagan-services"
+              >Eagan</a
+            >
+            <a
+              class="tab"
+              href="#red-wing-services"
+              data-content="red-wing-services"
+              >Red Wing</a
+            >
+          </div>
+
+          <div class="section-content" id="prod-services-content">
+            <!-- Content will be loaded here dynamically -->
           </div>
         </section>
         <section id="careers">
@@ -222,6 +275,7 @@
             <a class="tab" href="#apply" data-content="apply">Apply</a>
             <a class="tab" href="#benefits" data-content="benefits">Benefits</a>
           </div>
+
           <div class="section-content" id="careers-content">
             <!-- Content will be loaded here dynamically -->
           </div>
@@ -244,6 +298,27 @@
             >
             <a class="tab" href="#shakopee" data-content="shakopee">Shakopee</a>
           </div>
+
+          <button class="drop-down-btn mobile-only">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+          <div class="tabs-drop-down mobile-only">
+            <a class="tab" href="#corporate" data-content="corporate"
+              >Corporate</a
+            >
+            <a class="tab" href="#eagan-contact" data-content="eagan-contact"
+              >Eagan</a
+            >
+            <a class="tab" href="#hudson" data-content="hudson">Hudson</a>
+            <a
+              class="tab"
+              href="#red-wing-contact"
+              data-content="red-wing-contact"
+              >Red Wing</a
+            >
+            <a class="tab" href="#shakopee" data-content="shakopee">Shakopee</a>
+          </div>
+
           <div class="section-content" id="contact-content">
             <!-- Content will be loaded here dynamically -->
           </div>
@@ -253,5 +328,6 @@
 
       <footer>&copy; 2023</footer>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
