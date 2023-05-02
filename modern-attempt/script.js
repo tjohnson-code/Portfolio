@@ -2,6 +2,7 @@
 const header = document.querySelector('.header');
 const nav = document.querySelector('.nav');
 const navHeight = nav.getBoundingClientRect().height;
+const mainSections = document.querySelectorAll('.main-section');
 const sections = [
   'about',
   'news',
@@ -10,7 +11,7 @@ const sections = [
   'careers',
   'contact',
 ];
-
+// Dynamic menu bar
 const floatingMenu = function (entries) {
   const [entry] = entries;
   console.log(navHeight);
@@ -25,6 +26,24 @@ const headerObserver = new IntersectionObserver(floatingMenu, {
 });
 
 headerObserver.observe(header);
+
+// Revealing sections
+const revealMainSections = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove('section-hidden');
+  observer.unobserve(entry.target);
+};
+
+const mainSectionObserver = new IntersectionObserver(revealMainSections, {
+  root: null,
+  threshold: 0.25,
+});
+
+mainSections.forEach(function (mainSection) {
+  mainSectionObserver.observe(mainSection);
+  mainSection.classList.add('section-hidden');
+});
 
 // Function to load JSON content by section and tab name
 // function loadContent(sectionId, contentName) {

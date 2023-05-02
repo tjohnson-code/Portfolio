@@ -159,6 +159,11 @@ main h2 {
   padding: 6px 0;
 }
 
+.section-hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
 .scroll-container {
   height: 300px;
   overflow-y: auto;
@@ -334,8 +339,23 @@ footer {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
-  /* Add later */
+@media (min-width: 768px) and (max-width: 895px) {
+  .floating {
+    display: none;
+  }
+  .nav-links {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+  }
+
+  .search-bar {
+    align-self: center;
+    margin-bottom: 15px;
+  }
 }
 
 @media (min-width: 1200px) {
