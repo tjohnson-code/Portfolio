@@ -8,7 +8,7 @@ const iconSize = {
 
 function Header() {
   return (
-    <header className="flex w-full mx-auto items-center justify-center sticky top-0 z-30 bg-white text-slate-400 shadow-md">
+    <header className="flex w-full mx-auto items-center justify-center sticky top-14 z-30 bg-white text-slate-400 shadow-md md: tracking-wide">
       <div className="flex justify-between space-x-3 lg:max-w-7xl">
         {/* Flex row */}
         <div className="flex items-center pr-6 text-2xl font-bold">

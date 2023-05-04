@@ -11,7 +11,7 @@ export default function Home() {
 
       <Header />
 
-      <main className="flex justify-center">
+      <main className="flex justify-center pt-24">
         <Hero />
       </main>
     </div>

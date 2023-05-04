@@ -6,4 +6,42 @@
   .nav-hover {
     @apply transition duration-300 transform ease-in hover:scale-125;
   }
+
+  /* Pulsing opacity */
+  .pulse {
+    animation-name: pulse;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+
+@layer keyframes {
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+}
+
+/* Pulsing color brightness */
+
+@layer keyframes {
+  @keyframes pulseBright {
+    0%,
+    100% {
+      filter: brightness(100%);
+    }
+    50% {
+      filter: brightness(200%);
+    }
+  }
+}
+.pulseBright {
+  animation-name: pulseBright;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
