@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SocialIcon } from 'react-social-icons';
+import Image from 'next/image';
 
 const iconSize = {
   height: '40px',
@@ -8,12 +9,18 @@ const iconSize = {
 
 function Header() {
   return (
-    <header className="flex w-full mx-auto items-center justify-center sticky top-14 z-30 bg-white text-slate-400 shadow-md md: tracking-wide">
+    <header className="flex w-full mx-auto items-center justify-center sticky top-0 z-30 bg-white text-slate-400 shadow-md md: tracking-wide">
       <div className="flex justify-between space-x-3 lg:max-w-7xl">
         {/* Flex row */}
         <div className="flex items-center pr-6 text-2xl font-bold">
           {/* Logo - Left */}
-          <h2>Logo Here</h2>
+          <Image
+            className="bg-fixed rounded-2xl w-auto h-auto"
+            src="/tj.png"
+            width={30}
+            height={30}
+            alt="logo"
+          />
         </div>
         <div className="flex space-x-3 items-center">
           {/* Navigation - Center */}
