@@ -16,6 +16,7 @@ function Hero() {
       <div className="text-slate-300 text-2xl md:text-xl md:tracking-[widest]">
         Frontend Web Developer <PulsingCircles />
       </div>
+      {/* Add Projects */}
       <div>{/* Project 1 */}</div>
       <div>{/* Project 2 */}</div>
       <div>{/* Project 3 */}</div>
