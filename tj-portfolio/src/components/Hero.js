@@ -1,14 +1,16 @@
 import PulsingCircles from './PulsingCircles';
+import Image from 'next/image';
 
 function Hero() {
   return (
-    <div className="flex flex-col mt-24 md:mt-48 text-white">
-      <div className="flex justify-center items-end ">
-        <img
-          className="rounded-full"
+    <div className="flex flex-col mt-24 text-white">
+      <div className="flex justify-center items-end">
+        <Image
+          className="rounded-full w-24 h-24"
           src="/b-w-tj.png"
-          width={80}
-          height={80}
+          width={'80'}
+          height={'80'}
+          priority
           alt="tj-pic"
         />
         <div className="text-4xl md:text-3xl">Tim Johnson</div>

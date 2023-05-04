@@ -14,13 +14,15 @@ function Header() {
         {/* Flex row */}
         <div className="flex items-center pr-6 text-2xl font-bold">
           {/* Logo - Left */}
-          <Image
-            className="bg-fixed rounded-2xl w-auto h-auto"
-            src="/tj.png"
-            width={30}
-            height={30}
-            alt="logo"
-          />
+          <Link href="#hero">
+            <Image
+              className="bg-fixed rounded-2xl w-auto h-auto"
+              src="/tj.png"
+              width={30}
+              height={30}
+              alt="logo"
+            />
+          </Link>
         </div>
         <div className="flex space-x-3 items-center">
           {/* Navigation - Center */}
