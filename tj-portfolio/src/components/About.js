@@ -1,6 +1,6 @@
 function About() {
   return (
-    <div className="flex flex-col justify-center items-center max-w-xl text-slate-700 md:text-sm tracking-widest p-4 border-x-4 rounded-xl border-amber-600">
+    <div className="flex flex-col justify-center items-center max-w-2xl text-slate-700 md:text-sm tracking-widest p-4 border-x-4 rounded-xl border-amber-600">
       <p className="pb-3">
         A Frontend Web Developer with a strong foundation in project management.
         Over the past six years, I've worked as an Assistant Production Manager

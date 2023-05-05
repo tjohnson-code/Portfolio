@@ -9,14 +9,14 @@ const iconSize = {
 
 function Header() {
   return (
-    <header className="flex w-full mx-auto items-center justify-center sticky top-0 z-30 bg-white text-slate-400 shadow-md md: tracking-wide">
-      <div className="flex justify-between space-x-3 lg:max-w-7xl">
+    <header className="flex w-full mx-auto justify-center items-center sticky top-0 z-30 bg-white text-slate-400 shadow-md md: tracking-wide">
+      <div className="flex w-full justify-between md:px-12">
         {/* Flex row */}
         <div className="flex items-center pr-6 text-2xl font-bold">
           {/* Logo - Left */}
           <Link href="#hero">
             <Image
-              className="bg-fixed rounded-2xl w-auto h-auto"
+              className="bg-fixed rounded-2xl w-auto h-auto hover:animate-pulse"
               src="/tj.png"
               width={30}
               height={30}
@@ -24,7 +24,7 @@ function Header() {
             />
           </Link>
         </div>
-        <div className="flex space-x-3 items-center">
+        <div className="flex space-x-3 items-center md:tracking-widest">
           {/* Navigation - Center */}
           <Link className="hover:text-slate-500" href="#about">
             About
