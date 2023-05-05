@@ -5,20 +5,18 @@ import Hero from '@/components/Hero';
 
 export default function Home() {
   return (
-    <div className="h-screen bg-gradient-to-r from-gray-200 via-sky-600 to-slate-600 overflow-auto">
+    <div className="min-h-screen bg-gradient-to-r from-gray-300 via-sky-600 to-slate-600">
       <FavIconHead />
       <Header />
 
-      <main className="flex flex-col justify-center">
+      <main className="flex flex-col">
         <section id="hero" className="flex flex-row justify-center">
           <Hero />
         </section>
         <section id="about" className="flex justify-center">
           <About />
         </section>
-        <section id="projects" className="flex justify-center">
-          <h3>Projects listed here</h3>
-        </section>
+        <section id="projects" className="flex justify-center"></section>
       </main>
     </div>
   );
