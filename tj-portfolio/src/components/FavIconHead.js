@@ -4,7 +4,7 @@ function FavIconHead() {
   return (
     <Head>
       <link rel="icon" type="image/png" sizes="64x64" href="favicon.png" />
-      <title>TJ's Portfolio</title>
+      <title>Tim Johnson</title>
     </Head>
   );
 }
