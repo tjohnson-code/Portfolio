@@ -17,7 +17,7 @@ function Header() {
   };
 
   return (
-    <header className="flex w-full mx-auto justify-center items-center sticky top-0 z-30 bg-white text-slate-400 shadow-md md: tracking-wide">
+    <header className="flex w-full mx-auto justify-center items-center sticky top-0 z-30 bg-slate-200 text-slate-500 shadow-md md: tracking-wide">
       <div className="flex w-full justify-between md:px-12">
         {/* Flex row */}
         <div className="flex items-center pr-6 text-2xl font-bold">
@@ -34,14 +34,14 @@ function Header() {
         </div>
         <div className="flex items-center md:tracking-widest">
           {/* Navigation - Center */}
-          <Link className="px-3 hover:text-slate-500" href="#about">
+          <Link className="px-3 hover:text-slate-600" href="#about">
             About
           </Link>
-          <Link className="px-3 hover:text-slate-500" href="#projects">
+          <Link className="px-3 hover:text-slate-600" href="#projects">
             Projects
           </Link>
           <Link
-            className="px-3 hover:text-slate-500"
+            className="px-3 hover:text-slate-600"
             href="#"
             onClick={toggleModal}
           >

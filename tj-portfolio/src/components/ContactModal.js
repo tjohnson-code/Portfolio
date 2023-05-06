@@ -19,14 +19,14 @@ function ContactModal({ isOpen, onClose }) {
           e.stopPropagation();
         }}
       >
-        <div className="flex flex-col space-y-10">
-          <h4 className="text-amber-600 text-2xl pt-4 text-center">
+        <div className="space-y-4">
+          <h4 className="text-amber-600 sm:text-2xl text-center pt-3">
             I look forward to hearing from you!
           </h4>
-          <div className="space-y-10">
+          <div className="flex flex-col">
             <a
               href="tel:+6513193598"
-              className="flex justify-center items-center space-x-3"
+              className="flex justify-center items-center space-x-2"
             >
               <PhoneIcon className="text-cyan-500 h-7 w-7 animate-pulse" />
 
@@ -35,7 +35,7 @@ function ContactModal({ isOpen, onClose }) {
 
             <a
               href="mailto: tjjohnson.86@gmail.com"
-              className="flex justify-center items-center space-x-3"
+              className="flex justify-center items-center space-x-2"
             >
               <EnvelopeIcon className="text-cyan-500 h-6 w-6 animate-pulse" />
 
@@ -43,26 +43,34 @@ function ContactModal({ isOpen, onClose }) {
             </a>
           </div>
 
-          <form className="flex flex-col space-y-2">
-            <div className="flex space-x-2">
-              <input placeholder="Name" className="contact-input" type="text" />
+          <form className="flex flex-col">
+            <div className="flex flex-col space-y-2">
+              <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
+                <input
+                  placeholder="Name"
+                  className="contact-input"
+                  type="text"
+                />
+                <input
+                  placeholder="Email"
+                  className="contact-input"
+                  type="email"
+                />
+              </div>
               <input
-                placeholder="Email"
+                placeholder="Subject"
                 className="contact-input"
-                type="email"
+                type="text"
               />
+
+              <textarea placeholder="Message" className="contact-input" />
+              <button
+                type="submit"
+                className="bg-amber-600/90 text-slate-600 hover:bg-amber-600 rounded-xl"
+              >
+                Submit
+              </button>
             </div>
-
-            <input
-              placeholder="Subject"
-              className="contact-input"
-              type="text"
-            />
-
-            <textarea placeholder="Message" className="contact-input" />
-            <button type="submit" className="bg-amber-600 rounded-md">
-              Submit
-            </button>
           </form>
         </div>
 
