@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { SocialIcon } from 'react-social-icons';
 import Image from 'next/image';
+import { useState } from 'react';
+import ContactModal from './ContactModal';
 
 const iconSize = {
   height: '40px',
@@ -8,6 +10,12 @@ const iconSize = {
 };
 
 function Header() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
   return (
     <header className="flex w-full mx-auto justify-center items-center sticky top-0 z-30 bg-white text-slate-400 shadow-md md: tracking-wide">
       <div className="flex w-full justify-between md:px-12">
@@ -24,17 +32,22 @@ function Header() {
             />
           </Link>
         </div>
-        <div className="flex space-x-3 items-center md:tracking-widest">
+        <div className="flex items-center md:tracking-widest">
           {/* Navigation - Center */}
-          <Link className="hover:text-slate-500" href="#about">
+          <Link className="px-3 hover:text-slate-500" href="#about">
             About
           </Link>
-          <Link className="hover:text-slate-500" href="#projects">
+          <Link className="px-3 hover:text-slate-500" href="#projects">
             Projects
           </Link>
-          <Link className="hover:text-slate-500" href="#home">
+          <Link
+            className="px-3 hover:text-slate-500"
+            href="#"
+            onClick={toggleModal}
+          >
             Contact
           </Link>
+          <ContactModal isOpen={isModalOpen} onClose={toggleModal} />
         </div>
         <div className="flex items-center space-x-1">
           {/* Profile Links - Right */}
