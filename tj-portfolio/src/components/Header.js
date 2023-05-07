@@ -1,8 +1,8 @@
+import { useState } from 'react';
+import ContactModal from './ContactModal';
 import Link from 'next/link';
 import { SocialIcon } from 'react-social-icons';
 import Image from 'next/image';
-import { useState } from 'react';
-import ContactModal from './ContactModal';
 
 const iconSize = {
   height: '40px',
@@ -17,10 +17,10 @@ function Header() {
   };
 
   return (
-    <header className="flex w-full mx-auto justify-center items-center sticky top-0 z-30 bg-slate-200 text-slate-500 shadow-md md: tracking-wide">
-      <div className="flex w-full justify-between md:px-12">
+    <header className="flex w-full mx-auto justify-center items-center sticky top-0 z-30 bg-slate-200 text-slate-500 shadow-md sm:tracking-wide">
+      <div className="flex w-full justify-between sm:px-12">
         {/* Flex row */}
-        <div className="flex items-center pr-6 text-2xl font-bold">
+        <div className="flex items-center px-6 text-2xl font-bold">
           {/* Logo - Left */}
           <Link href="#hero">
             <Image
@@ -32,7 +32,7 @@ function Header() {
             />
           </Link>
         </div>
-        <div className="flex items-center md:tracking-widest">
+        <div className="flex flex-col items-center sm:flex-row sm:tracking-widest">
           {/* Navigation - Center */}
           <Link className="px-3 hover:text-slate-600" href="#about">
             About

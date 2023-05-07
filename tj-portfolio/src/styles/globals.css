@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}
+
 @layer components {
   .nav-hover {
     @apply transition duration-300 transform ease-in hover:scale-125;

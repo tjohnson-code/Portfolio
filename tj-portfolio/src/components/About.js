@@ -1,14 +1,13 @@
 function About() {
   return (
-    <div className="flex flex-col justify-center items-center max-w-2xl text-slate-700 md:text-sm tracking-widest p-4 border-x-4 rounded-xl border-amber-600">
+    <div className="flex flex-col justify-center items-center max-w-2xl text-slate-700 sm:text-sm tracking-widest p-4 border-x-4 rounded-xl border-amber-600 xl:max-w-4xl xl:text-xl">
       <p className="pb-3">
-        {`A Frontend Web Developer with a strong foundation in project management.
-        Over the past six years, I've worked as an Assistant Production Manager
-        at a non-profit organization, while also feeding my interest in web
+        {`A Front-End Web Developer with a strong foundation in project management.
+        Over the past six years, I've worked for a non-profit organization (most recently as Assistant-Production Manager/IT support), while also feeding my interest in web
         development through college courses and online materials - learning
-        whatever I could in my spare time. Over the years my passion grew, which
+        whatever I could in my spare time. Through the years my passion grew, which
         led me to focus full-time on pursuing a front-end career. My skill set
-        includes HTML, CSS, JavaScript, React, Tailwind CSS, and Next.js.`}
+        includes HTML, CSS, JavaScript, React, Tailwind, and Next.js.`}
       </p>
 
       <p className="pb-3">

@@ -14,10 +14,10 @@ function Hero() {
           priority
           alt="tj-pic"
         />
-        <div className="text-4xl md:text-3xl">Tim Johnson</div>
+        <div className="text-3xl">Tim Johnson</div>
       </div>
-      <div className="text-slate-300 text-2xl md:text-xl md:tracking-[widest]">
-        Frontend Web Developer <PulsingCircles />
+      <div className="text-slate-300 text-xl tracking-widest">
+        Front-End Web Developer <PulsingCircles />
       </div>
       <div className="flex justify-center p-3">
         <Skills />
