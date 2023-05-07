@@ -38,12 +38,12 @@ function ContactModal({ isOpen, onClose }) {
             </a>
 
             <a
-              href="mailto: tjjohnson.86@gmail.com"
+              href="mailto:tim@webdevtj.com"
               className="flex justify-center items-center space-x-2"
             >
               <EnvelopeIcon className="text-cyan-500 h-6 w-6 animate-pulse" />
 
-              <div className="text-2xl">tjjohnson.86@gmail.com</div>
+              <div className="text-2xl">tim@webdevtj.com</div>
             </a>
           </div>
 
