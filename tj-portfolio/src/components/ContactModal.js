@@ -1,11 +1,15 @@
+import React, { useState } from 'react';
 import {
+  CheckCircleIcon,
   EnvelopeIcon,
   PhoneIcon,
-  PlayCircleIcon,
   XCircleIcon,
+  XMarkIcon,
 } from '@heroicons/react/24/solid';
 
 function ContactModal({ isOpen, onClose }) {
+  const [status, setStatus] = useState(null);
+
   if (!isOpen) return null;
 
   return (
@@ -43,33 +47,85 @@ function ContactModal({ isOpen, onClose }) {
             </a>
           </div>
 
-          <form className="flex flex-col">
+          <form
+            onSubmit={async e => {
+              e.preventDefault();
+
+              const formData = {
+                name: e.target.name.value,
+                email: e.target.email.value,
+                subject: e.target.subject.value,
+                message: e.target.message.value,
+              };
+
+              const response = await fetch('/api/submitEmail', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+              });
+
+              if (response.ok) {
+                setStatus('success');
+                e.target.reset();
+              } else {
+                setStatus('error');
+              }
+            }}
+            className="flex flex-col"
+          >
             <div className="flex flex-col space-y-2">
               <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
                 <input
+                  name="name"
                   placeholder="Name"
                   className="contact-input"
                   type="text"
+                  required={true}
+                  autoComplete="off"
                 />
                 <input
+                  name="email"
                   placeholder="Email"
                   className="contact-input"
                   type="email"
+                  required={true}
+                  autoComplete="off"
                 />
               </div>
               <input
+                name="subject"
                 placeholder="Subject"
                 className="contact-input"
                 type="text"
+                required={true}
+                autoComplete="off"
               />
 
-              <textarea placeholder="Message" className="contact-input" />
+              <textarea
+                name="message"
+                placeholder="Message"
+                className="contact-input"
+                required={true}
+                autoComplete="off"
+              />
               <button
                 type="submit"
                 className="bg-amber-600/90 text-slate-600 hover:bg-amber-600 rounded-xl"
               >
                 Submit
               </button>
+              {status === 'success' && (
+                <div className="text-green-500 flex items-center space-x-2">
+                  <CheckCircleIcon className="h-6 w-6" />
+                  <span>Success - Your message has been sent.</span>
+                </div>
+              )}
+              {status === 'error' && (
+                <div className="text-red-500 flex items-center space-x-2">
+                  <XMarkIcon className="h-6 w-6" />
+                  <span>Something went wrong - Please try again.</span>
+                </div>
+              )}
             </div>
           </form>
         </div>

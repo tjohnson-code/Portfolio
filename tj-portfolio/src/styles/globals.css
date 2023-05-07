@@ -8,7 +8,7 @@
   }
 
   .contact-input {
-    @apply outline-none bg-slate-500/30 rounded-sm px-6 py-4 border-b border-cyan-600 focus:border-amber-600 hover:border-amber-600 text-slate-400 placeholder-gray-400;
+    @apply outline-none bg-slate-500/30 rounded-sm px-6 py-4 border-b border-cyan-600 focus:border-amber-600 hover:border-amber-600 text-slate-400 placeholder-slate-400;
   }
 
   /* Pulsing opacity */

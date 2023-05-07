@@ -5,6 +5,7 @@ import {
   siReact,
   siTailwindcss,
   siNextdotjs,
+  siVercel,
 } from 'simple-icons';
 
 const skillIcons = [
@@ -14,6 +15,7 @@ const skillIcons = [
   { name: 'React', icon: siReact },
   { name: 'Tailwind CSS', icon: siTailwindcss },
   { name: 'Next.js', icon: siNextdotjs },
+  { name: 'Vercel', icon: siVercel },
 ];
 
 function Skills() {
