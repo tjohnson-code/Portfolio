@@ -8,32 +8,17 @@ const projects = [
     img: '/pixeldraw.png',
     description:
       'Pixel Draw is my version of an Etch-a-sketch. The technologies I used for this project were: HTML, CSS, and JavaScript.',
-    url: 'https://tjohnson-code.github.io/Portfolio/pixeldraw/index.html',
+    url: 'https://pixeldraw.webdevtj.com',
     git: 'https://github.com/tjohnson-code/Portfolio/tree/main/pixeldraw',
   },
   {
-    name: 'Pixel Draw',
+    name: 'Portfolio Website',
     id: 2,
-    img: '/pixeldraw.png',
-    description: 'Here is project 1 and some info',
+    img: '/portfoliowebsite.png',
+    description:
+      'My custom website created for hosting all of my portfolio content. This was built using React, Tailwind, and Next.js',
     url: 'https://www.webdevtj.com',
-    git: 'https://www.webdevtj.com',
-  },
-  {
-    name: 'Pixel Draw',
-    id: 3,
-    img: '/pixeldraw.png',
-    description: 'Here is project 1 and some info',
-    url: 'https://www.webdevtj.com',
-    git: 'https://www.webdevtj.com',
-  },
-  {
-    name: 'Pixel Draw',
-    id: 4,
-    img: '/pixeldraw.png',
-    description: 'Here is project 1 and some info',
-    url: 'https://www.webdevtj.com',
-    git: 'https://www.webdevtj.com',
+    git: 'https://github.com/tjohnson-code/Portfolio/tree/main/tj-portfolio',
   },
 ];
 
