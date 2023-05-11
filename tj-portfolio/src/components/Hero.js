@@ -4,10 +4,10 @@ import Skills from './Skills';
 
 function Hero() {
   return (
-    <div className="flex flex-col mt-24 text-white">
+    <div className="flex flex-col justify-center items-center text-white">
       <div className="flex items-end">
         <Image
-          className="rounded-full w-24 h-24"
+          className="rounded-full w-36 h-36"
           src="/b-w-tj.png"
           width={'200'}
           height={'200'}

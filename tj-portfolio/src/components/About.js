@@ -1,35 +1,8 @@
 function About() {
   return (
-    <div className="flex flex-col justify-center items-center max-w-2xl text-slate-700 sm:text-sm tracking-widest p-4 border-x-4 rounded-xl border-amber-600 xl:max-w-4xl xl:text-xl">
-      <p className="pb-3">
-        {`A Front-End Web Developer with a strong foundation in project management.
-        Over the past six years, I've worked for a non-profit organization (most recently as Assistant-Production Manager/IT support), while also feeding my interest in web
-        development through college courses and online materials - learning
-        whatever I could in my spare time. Through the years my passion grew, which
-        led me to focus full-time on pursuing a front-end career. My skill set
-        includes HTML, CSS, JavaScript, React, Tailwind, and Next.js.`}
-      </p>
-
-      <p className="pb-3">
-        As a 36-year-old professional, I bring a unique blend of experience and
-        expertise to the table. My background in project management helped shape
-        my ability to effectively coordinate resources, meet deadlines, and
-        communicate with diverse teams, making me an ideal candidate for
-        projects that require a strong sense of organization and attention to
-        detail.
-      </p>
-
-      <p className="pb-3">
-        {`I pride myself on creating clean, accessible, and user-friendly websites
-        that offer seamless user experiences. By combining my technical skills
-        with strong time management, I deliver web solutions that not only meet
-        clients' needs but also exceed their expectations.`}
-      </p>
-
-      <p className="pb-3">
-        {`When I'm not coding or managing projects, you can find me: exploring
-        the outdoors with my fiance and our 5 year old Siberian Husky (who likes
-        to lead us into the unknown).`}
+    <div className="flex justify-center items-center max-w-7xl bg-slate-500 text-slate-700 sm:text-sm tracking-widest p-12 border-y-2 rounded-xl border-amber-600/50 xl:text-xl">
+      <p>
+        {`A Front-End Web Developer with a solid background in project management. My prior experience as an Assistant Production Manager/IT Support for a non-profit organization has honed my ability to lead teams, effectively coordinate resources, meet deadlines, and communicate with a diverse range of individuals. This makes me an ideal candidate for projects requiring strong organizational skills and meticulous attention to detail.`}
       </p>
     </div>
   );
