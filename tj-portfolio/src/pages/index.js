@@ -16,14 +16,14 @@ export default function Home() {
         >
           <Hero />
         </section>
+        <section id="about" className="h-screen flex items-center">
+          <About />
+        </section>
         <section
           id="projects"
           className="flex items-center justify-center min-h-screen p-4"
         >
           <Projects />
-        </section>
-        <section id="about" className="h-screen flex items-center">
-          <About />
         </section>
       </main>
     </div>

@@ -31,11 +31,11 @@ function Header() {
           </Link>
         </div>
         <div className="flex flex-col items-center sm:flex-row sm:tracking-widest">
-          <Link className="px-3 hover:text-slate-600" href="#projects">
-            Projects
-          </Link>
           <Link className="px-3 hover:text-slate-600" href="#about">
             About
+          </Link>
+          <Link className="px-3 hover:text-slate-600" href="#projects">
+            Projects
           </Link>
           <Link
             className="px-3 hover:text-slate-600"
