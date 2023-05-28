@@ -1,6 +1,6 @@
 import { client } from '@/sanity/lib/client';
 import { groq } from 'next-sanity';
-import { PreviewSuspense } from 'next-sanity/preview';
+import PreviewSuspense from './components/PreviewSuspense';
 import { draftMode } from 'next/headers';
 import ListOfPosts from './components/ListOfPosts';
 import PreviewPosts from './components/PreviewPosts';
@@ -13,22 +13,22 @@ const query = groq`
 } | order(_createdAt desc)`;
 
 export default async function Home() {
-  // const { isEnabled } = draftMode();
-  // if (isEnabled) {
-  //   return (
-  //     <PreviewSuspense
-  //       fallback={
-  //         <div role="status">
-  //           <p className="text-center text-xl animate-pulse text-red-900">
-  //             Loading Draft . . .
-  //           </p>
-  //         </div>
-  //       }
-  //     >
-  //       <PreviewPosts query={query} />
-  //     </PreviewSuspense>
-  //   );
-  // }
+  const { isEnabled } = draftMode();
+  if (isEnabled) {
+    return (
+      <PreviewSuspense
+        fallback={
+          <div role="status">
+            <p className="text-center text-xl animate-pulse text-red-900">
+              Loading Draft . . .
+            </p>
+          </div>
+        }
+      >
+        <PreviewPosts query={query} />
+      </PreviewSuspense>
+    );
+  }
   const posts = await client.fetch(query);
   return (
     <main className="px-6 mx-auto">
