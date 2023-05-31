@@ -5,6 +5,9 @@ import './globals.css';
 export const metadata = {
   title: 'Blog App',
   description: 'Created by Tim Johnson',
+  icons: {
+    icon: '/images/favicon.png',
+  },
 };
 
 export default function RootLayout({

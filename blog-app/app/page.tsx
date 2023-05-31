@@ -4,6 +4,8 @@ import PreviewSuspense from './components/PreviewSuspense';
 import { draftMode } from 'next/headers';
 import ListOfPosts from './components/ListOfPosts';
 import PreviewPosts from './components/PreviewPosts';
+import Link from 'next/link';
+import { FaPenSquare } from 'react-icons/fa';
 
 const query = groq`
 *[_type=='post'] {
@@ -32,8 +34,16 @@ export default async function Home() {
   const posts = await client.fetch(query);
   return (
     <main className="px-6 mx-auto">
-      <p className="mt-12 mb-12 text-4xl text-center dark:text-white/80">
+      <p className="mt-12 text-4xl text-center dark:text-white/80">
         The Eternal Freeze
+      </p>
+      <p className="text-4xl lg:text-2xl mb-12 flex justify-center items-center">
+        <Link
+          href="/studio"
+          className="text-amber-100/80 no-underline hover:text-amber-100"
+        >
+          <FaPenSquare />
+        </Link>
       </p>
       <ListOfPosts posts={posts} />;
     </main>

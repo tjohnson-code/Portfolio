@@ -3,6 +3,8 @@ import { client } from '../../../lib/sanity.client';
 import Image from 'next/image';
 import { PortableText } from '@portabletext/react';
 import urlFor from '@/lib/urlFor';
+import { FaHome } from 'react-icons/fa';
+import Link from 'next/link';
 
 type Props = {
   params: {
@@ -32,11 +34,20 @@ export default async function Post({ params: { slug } }: Props) {
               width={250}
               height={300}
               sizes="100vw"
+              priority={true}
             />
           </div>
           <h1 className=" text-xl font-bold">{post.title}</h1>
           <p className="italic p-2">{post.author.name}</p>
           <PortableText value={post.body} />
+          <p>
+            <Link
+              href="/"
+              className="text-red-800/80 no-underline hover:text-red-700 flex items-center"
+            >
+              ←<FaHome />
+            </Link>
+          </p>
         </div>
       </section>
     </article>

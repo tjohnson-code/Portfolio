@@ -3,13 +3,13 @@ import { SocialIcon } from 'react-social-icons';
 
 const projects = [
   {
-    name: 'Pixel Draw',
+    name: 'Blog App',
     id: 1,
-    img: '/pixeldraw.png',
+    img: '/customblog.png',
     description:
-      'Pixel Draw is my version of an Etch-a-sketch. The technologies I used for this project were: HTML, CSS, and JavaScript.',
-    url: 'https://pixeldraw.webdevtj.com',
-    git: 'https://github.com/tjohnson-code/Portfolio/tree/main/pixeldraw',
+      'This custom blog was built using Typescript, React, Tailwind, Next.js, and Sanity.io for the headless CMS.',
+    url: 'https://blog.webdevtj.com',
+    git: 'https://github.com/tjohnson-code/Portfolio/tree/main/blog-app',
   },
   {
     name: 'Portfolio Website',
@@ -19,6 +19,15 @@ const projects = [
       'My custom website created for hosting all of my portfolio content. This was built using React, Tailwind, and Next.js',
     url: 'https://www.webdevtj.com',
     git: 'https://github.com/tjohnson-code/Portfolio/tree/main/tj-portfolio',
+  },
+  {
+    name: 'Pixel Draw',
+    id: 3,
+    img: '/pixeldraw.png',
+    description:
+      'Pixel Draw is my version of an Etch-a-sketch. The technologies I used for this project were: HTML, CSS, and JavaScript.',
+    url: 'https://pixeldraw.webdevtj.com',
+    git: 'https://github.com/tjohnson-code/Portfolio/tree/main/pixeldraw',
   },
 ];
 

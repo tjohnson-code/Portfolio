@@ -21,6 +21,8 @@ export default function ListOfPosts({ posts }: Props) {
                   src={urlFor(post.mainImage).url()}
                   alt={post.author.name}
                   fill
+                  sizes="100vw"
+                  priority={true}
                 />
                 <div className="absolute bottom-0 w-full bg-black/80 background-blur-lg rounded drop-shadow-lg p-5 flex justify-between">
                   <div>
