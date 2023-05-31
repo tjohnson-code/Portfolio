@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="dark:bg-emerald-950 text-emerald-950 max-w-7xl mx-auto">
+      <body className="dark:bg-emerald-950 text-red-900 max-w-7xl mx-auto">
         <Navbar />
         <ProfilePic />
         {children}

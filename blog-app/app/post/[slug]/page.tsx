@@ -25,7 +25,7 @@ export default async function Post({ params: { slug } }: Props) {
   return (
     <article className="p-5">
       <section>
-        <div className="text-amber-100/80 flex flex-col justify-center items-center max-w-7xl space-x-3">
+        <div className="dark:text-amber-100/80 flex flex-col justify-center items-center max-w-7xl space-x-3">
           <div className="w-72 h-auto">
             <Image
               className="w-full h-auto rounded-lg"
@@ -43,9 +43,9 @@ export default async function Post({ params: { slug } }: Props) {
           <p>
             <Link
               href="/"
-              className="text-red-800/80 no-underline hover:text-red-700 flex items-center"
+              className="text-emerald-950 dark:text-red-800/80 no-underline hover:text-emerald-800 dark:hover:text-red-700 flex items-center"
             >
-              ←<FaHome />
+              <FaHome />
             </Link>
           </p>
         </div>

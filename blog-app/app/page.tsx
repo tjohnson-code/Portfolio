@@ -45,7 +45,7 @@ export default async function Home() {
           <FaPenSquare />
         </Link>
       </p>
-      <ListOfPosts posts={posts} />;
+      <ListOfPosts posts={posts} />
     </main>
   );
 }
