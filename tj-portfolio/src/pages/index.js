@@ -6,7 +6,7 @@ import Projects from '@/components/Projects';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-gray-300 via-slate-600 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-r from-gray-200 via-slate-500 to-slate-700">
       <FavIconHead />
       <Header />
       <main className="flex flex-col items-center">
