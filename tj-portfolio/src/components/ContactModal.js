@@ -29,12 +29,12 @@ function ContactModal({ isOpen, onClose }) {
           </h4>
           <div className="flex flex-col">
             <a
-              href="tel:+6513193598"
+              href="tel:6513193598"
               className="flex justify-center items-center space-x-2"
             >
               <PhoneIcon className="text-cyan-500 h-7 w-7 animate-pulse" />
 
-              <div className="text-2xl">+651-319-3598</div>
+              <div className="text-2xl">651-319-3598</div>
             </a>
 
             <a
