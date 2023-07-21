@@ -1,0 +1,20 @@
+{
+  "name": "name-generator",
+  "version": "1.0.0",
+  "description": "name generator api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "name",
+    "generator",
+    "api"
+  ],
+  "author": "Tim Johnson",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
